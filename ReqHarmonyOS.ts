@@ -2,7 +2,7 @@
 
 import http from '@ohos.net.http'
 
-const host = 'your path'
+const host = 'your host'
 
 function SendReqGet(path: string,extraData?: string | Object | ArrayBuffer, callBack?: Function) {
   const httpRequest = http.createHttp()
