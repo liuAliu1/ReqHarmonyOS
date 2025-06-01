@@ -4,10 +4,11 @@ import http from '@ohos.net.http'
 
 const host = 'your path'
 
- function SendReqGet(path: string, callBack?: Function) {
+function SendReqGet(path: string,extraData?: string | Object | ArrayBuffer, callBack?: Function) {
   const httpRequest = http.createHttp()
    httpRequest.request(host + path, {
     method: http.RequestMethod.GET,
+    extraData: extraData,
     expectDataType: http.HttpDataType.OBJECT,
     header: {
       'Content-Type': 'application/json',
